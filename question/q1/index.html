@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>&lt;model-viewer&gt; template</title>
+    <meta charset="utf-8">
+    <meta name="description" content="&lt;model-viewer&gt; template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="./styles.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <!-- <model-viewer> HTML element -->
+    <model-viewer src="wheel1.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1" camera-orbit="402.4deg 59.16deg 14.59m" field-of-view="32.76deg">
+      <button class="Hotspot" slot="hotspot-3" onclick="hotspotClicked(this)" data-position="-0.06362752002119876m 1.6591167867793015m -0.06284899697213056m" data-normal="0.7117635512485205m 0.2657078835073688m -0.6502245517943237m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation" style="display:none;">ข้อเสนอแนะตอบถูก:การตรวจสปรูล้อดี ต้องไม่มีรอยกลวงกลางจุก จุกล้อต้องไม่มีรอยกร่อนลึก และบริเวณบอร์ต้องไม่มีรอยแตก รอยยุบ</div>
+      </button><button class="Hotspot" slot="hotspot-7" onclick="hotspotClicked(this)" data-position="-0.036737430235825756m 1.0569656644599488m -0.7353182752983781m" data-normal="0.0007158028541378729m 0.9988136073800071m 0.04869153251655942m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation" style="display:none;">ข้อเสนอแนะตอบผิด: สปรูล้ออยู่บริเวณตรงกลาง ด้านหน้าล้อ</div>
+      </button><button class="Hotspot" slot="hotspot-9" onclick="hotspotClicked(this)" data-position="-2.4020303779919807m 1.333634352357626m 2.046422310612942m" data-normal="0.18858885894811192m 0.9690639399484909m -0.15921470589162529m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation" style="display:none;">ข้อเสนอแนะตอบผิด: สปรูล้ออยู่บริเวณตรงกลาง ด้านหน้าล้อ</div>
+      </button><button class="Hotspot" slot="hotspot-13" onclick="hotspotClicked(this)" data-position="0.9996276478269505m -1.0730686290475475m 3.0136716061910556m" data-normal="0.3094050779483489m 0.006210037848242792m 0.9509100552469196m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation" style="display:none;">ข้อเสนอแนะตอบผิด: สปรูล้ออยู่บริเวณตรงกลาง ด้านหน้าล้อ</div>
+      </button><button class="Hotspot" slot="hotspot-15" onclick="hotspotClicked(this)" data-position="2.7662965477512502m -1.2661263236531557m 1.5667713995372996m" data-normal="0.8762616272880409m 0.010343685198928507m 0.48172457765721294m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation" style="display:none;">ข้อเสนอแนะตอบผิด: สปรูล้ออยู่บริเวณตรงกลาง ด้านหน้าล้อ</div>
+      </button><button class="Hotspot" slot="hotspot-16" onclick="hotspotClicked(this)" data-position="2.496261590151444m -1.9779702861246375m -2.6689763399927746m" data-normal="8.536043298186751e-14m 1m 9.617969585120635e-12m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation" style="display:none;">ข้อเสนอแนะตอบผิด: สปรูล้ออยู่บริเวณตรงกลาง ด้านหน้าล้อ</div>
+      </button><button class="Hotspot" slot="hotspot-18" onclick="hotspotClicked(this)" data-position="-1.6332611326376851m -0.6610493126858418m -2.604884076612751m" data-normal="0.5095255421377067m -0.05634818058468841m 0.8586085280580852m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation" style="display:none;">ข้อเสนอแนะตอบผิด: สปรูล้ออยู่บริเวณตรงกลาง ด้านหน้าล้อ</div>
+      </button>
+      <div class="progress-bar hide" slot="progress-bar">
+          <div class="update-bar"></div>
+      </div>
+      <button slot="ar-button" id="ar-button">
+          View in your space
+      </button>
+      <div id="ar-prompt">
+          <img src="ar_hand_prompt.png">
+      </div>
+    </model-viewer>  
+    <script src="script.js"></script>
+
+    <script>
+        function hotspotClicked(hotspot){
+          const annotation = hotspot.querySelector('.HotspotAnnotation');
+          annotation.style.display = (annotation.style.display == 'none') ? 'block' : 'none';
+        }
+  
+      </script>
+
+    <!-- Loads <model-viewer> for browsers: -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../web-ar"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "model1"
+	}
+}
